@@ -1,0 +1,43 @@
+﻿<Page x:Class="questionnaire.Authorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:questionnaire"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="Супер анкета">
+
+    <Grid Margin="5" Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="1" Margin="5" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock FontSize="40" Foreground="WhiteSmoke">Привет!</TextBlock>
+        </Grid>
+        <Grid Grid.Row="1" Grid.RowSpan="2" Grid.Column="1">
+            <StackPanel>
+                <Label Foreground="WhiteSmoke" FontSize="28">
+                    Login
+                </Label>
+                <Border Background="#3b3b54" MinHeight="50" CornerRadius="20">
+                    <TextBox Name="tbLogin" KeyDown="TextBox_KeyDown" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="Transparent" Background="Transparent" Foreground="WhiteSmoke"></TextBox>
+                </Border>
+                <Label Foreground="WhiteSmoke" FontSize="28">
+                    Password
+                </Label>
+                <Border Background="#3b3b54" MinHeight="50" CornerRadius="20">
+                    <PasswordBox Name="pbPassword" KeyDown="PasswordBox_KeyDown" Style="{DynamicResource MaterialDesignFilledPasswordBox}" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="Transparent" Background="Transparent" Foreground="WhiteSmoke"></PasswordBox>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
