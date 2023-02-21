@@ -15,17 +15,14 @@ using System.Windows.Shapes;
 
 namespace questionnaire
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для QuestionCard.xaml
+    /// </summary>
+    public partial class QuestionCard : UserControl
     {
-        public static Frame AppFrame;
-        public MainWindow()
+        public QuestionCard()
         {
             InitializeComponent();
-            DataContext = this;
-            Database.Connect("localhost", "5432", "postgres", "1234", "questionnaire");
-            AppFrame = MainFrame;
-
-            AppFrame.Navigate(PageControl.authorization);
-;        }
+        }
     }
 }

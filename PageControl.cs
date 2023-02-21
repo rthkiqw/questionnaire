@@ -18,5 +18,16 @@ namespace questionnaire
                 return auth;
             }
         }
+
+        private static Constructor constructor;
+        public static Constructor Constructor
+        {
+            get
+            {
+                if (constructor == null)
+                    constructor = new Constructor();
+                return constructor;
+            }
+        }
     }
 }
